@@ -1,3 +1,6 @@
+# Fork notes
+This fork modifies the Android plugin to use the default SharedPreferences instead of "FlutterSharedPreferences".
+
 # shared\_preferences\_android
 
 The Android implementation of [`shared_preferences`][1].

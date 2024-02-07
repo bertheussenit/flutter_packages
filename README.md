@@ -1,3 +1,6 @@
+# Fork notes (SharedPreferences)
+This fork modifies the Android plugin to use the default SharedPreferences instead of "FlutterSharedPreferences".
+
 # Flutter Packages
 
 [![Release Status](https://github.com/flutter/packages/actions/workflows/release.yml/badge.svg)](https://github.com/flutter/packages/actions/workflows/release.yml)
