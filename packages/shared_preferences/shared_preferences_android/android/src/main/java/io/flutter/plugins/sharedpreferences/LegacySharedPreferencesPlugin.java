@@ -31,7 +31,6 @@ import java.util.Set;
 /** LegacySharedPreferencesPlugin */
 public class LegacySharedPreferencesPlugin implements FlutterPlugin, SharedPreferencesApi {
   private static final String TAG = "SharedPreferencesPlugin";
-  private static final String SHARED_PREFERENCES_NAME = "FlutterSharedPreferences";
   // All identifiers must match the SharedPreferencesPlugin.kt file, as well as the strings.dart file.
   private static final String LIST_IDENTIFIER = "VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu";
   // The symbol `!` was chosen as it cannot be created by the base 64 encoding used with LIST_IDENTIFIER.
@@ -52,7 +51,7 @@ public class LegacySharedPreferencesPlugin implements FlutterPlugin, SharedPrefe
   }
 
   private void setUp(@NonNull BinaryMessenger messenger, @NonNull Context context) {
-    preferences = context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
+    preferences = context.getSharedPreferences(context.getPackageName() + "_preferences", Context.MODE_PRIVATE);
     try {
       SharedPreferencesApi.setUp(messenger, this);
     } catch (Exception ex) {
